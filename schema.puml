@@ -56,7 +56,10 @@ entity "Loan" as L {
 
 ' ============================================================
 ' TODO: Add relationships here
-'
+'B }o--o{ A : "writes"
+ B ||--|{ Copy : "is available as"
+ Member ||--o{ Loan : "places"
+ Copy ||--o{ Loan : "is borrowed in"
 ' Crow's Foot notation:
 '   ||   exactly one     (mandatory one)
 '   |{   one or more     (one or more)
